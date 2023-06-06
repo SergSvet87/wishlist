@@ -116,7 +116,7 @@ export const getWish = async (id) => {
   }
 };
 
-export const sendDataUpdateWish = async (id, userData) => {
+export const sendDataUpdateWish = async (id, wishData) => {
   const token = localStorage.getItem(JWT_TOKEN_KEY);
   const headers = {
     "Content-Type": "application/json",
@@ -130,7 +130,7 @@ export const sendDataUpdateWish = async (id, userData) => {
     const response = await fetch(`${API_URL}/wish/${id}`, {
       method: "PUT",
       headers,
-      body: JSON.stringify(userData),
+      body: JSON.stringify(wishData),
     });
 
     const data = await response.json();

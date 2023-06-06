@@ -34,7 +34,7 @@ const handleEditWishRoute = async (id) => {
 
   const { sectionEditWish, formWish } = await createEditWish(id);
 
-  renderNavigation("profile", formWish);
+  renderNavigation("wish", formWish);
   app.append(sectionEditWish);
 };
 

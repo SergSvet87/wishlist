@@ -33,8 +33,8 @@ export const createWishlist = async (pageLogin) => {
   const avatar = createElement("img", {
     className: "profile__avatar",
     src: `${API_URL}/${user.avatar}`,
-    alt: user.name ? user.login : "Фото (аватар) пользователя",
-    title: user.name ? user.login : "Фото (аватар) пользователя",
+    alt: user.name ? user.name : `Фото (аватар) ${user.login}`,
+    title: user.name ? user.name : `Фото (аватар) ${user.login}`,
   });
 
   const content = createElement("div", {
